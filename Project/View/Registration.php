@@ -1,121 +1,84 @@
-<html>
 <head>
-  <title>Registration</title>
+    <title></title>
+    <link rel="stylesheet" href="../Assets/Admin.css"/>
 </head>
-<body>
-  <table border="1" cellspacing="0" width="550">
-    <tr>
-      <td>
-        <table>
-          <tr>
-            <td width="500">Click & Stay</td>
-            <td align="right">
-              <a style="color: rgb(0, 102, 255); " href="Login.php">Login</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr style="height: 600; width: 700;">
-      <td align="center">
+
+
+<body id="b8">
+        <fieldset id="b9">
+<img src="../Assets/logo.png" id="logo-image">
+    <h3 id="b1"><u>Click & Stay</u></h3>
+    
+    <h4 id="b10">Find your next stay</h4>
+
+ 
+      
+</fieldset>
+
+        <fieldset>
         <form method="post" action="../Controller/RegCheck.php" enctype="">
-          <fieldset style="width: 400;">
-            <legend><b>REGISTRATION</b></legend>
-            <table>
-              <tr>
-                <td align="left">Name</td>
-                <td>
-                  <span style="padding: 3px;">
-                    :<input type="text" name="name" value="">
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">Email</td>
-                <td>
-                  <span style="padding: 3px;">
-                    :<input type="email" name="email" value="">
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">User Name</td>
-                <td>
-                  <span style="padding: 3px;">
-                    :<input type="text" name="username" value="">
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">Password</td>
-                <td>
-                  <span style="padding: 3px;">
-                    :<input type="password" name="password" value="">
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">Confirm Password</td>
-                <td>
-                  <span style="padding: 3px;">
-                    :<input type="password" name="cpassword" value="">
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">Gender</td>
-                <td>
-                  <input type="radio" name="gender" value="Male" /> Male
-                  <input type="radio" name="gender" value="Female" /> Female
-                  <input type="radio" name="gender" value="Other" /> Other
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td align="left">Date Of Birth</td>
-                <td>
-                  <div style="padding: 4px;">
-                    <input type="text" size="2px" name="dd" value=""><b> /</b>
-                    <input type="text" size="2px" name="mm" value=""><b> /</b>
-                    <input type="text" size="2px" name="yyyy" value="">
-                    <i>(dd/mm/yyyy)</i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><hr></td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input type="submit" name="Submit" value="Submit" />
-                  <input type="reset" name="reset" value="Reset" />
-                </td>
-              </tr>
-            </table>
-          </fieldset>
-        </form>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">Copyright © 2017</td>
-    </tr>
-  </table>
+
+            <div class="c1">
+
+                <div>
+                    <h3>
+                        Sign Up
+                    </h3>
+                </div>
+    
+                <div class="input-box">
+                    <input type="text" id="name" name="name" value="" onkeyup="nameValidate()" placeholder="Name" />
+                </div>
+    
+                <div class="input-box">
+                    <input type="text" id="email" name="email" value="" onkeyup="emailValidate()" placeholder="Email" />
+                </div>
+    
+    
+                <div class="input-box"> 
+                    <input type="text" id="username" name="username" value="" onkeyup="usernameValidate()"  placeholder="Username" />
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" value="" onkeyup="passwordValidate()" placeholder="Password" />
+                </div>
+                <div class="input-box">
+                    <input type="password" id="cpassword" name="cpassword" value="" onkeyup="cpasswordValidate()" placeholder="Confirm Password" />
+                </div>
+                <div class="input-box dob-fields"> 
+                 <input type="text" id="dd" size="2px" name="dd" value="" placeholder="dd" onkeyup="dob()" >
+                  <input type="text" id="mm" size="2px" name="mm" value=""placeholder="mm"  onkeyup="dob()" > 
+                   <input type="text" id="yyyy" size="4px" name="yyyy" value="" placeholder="yyyy" onkeyup="dob()" > 
+                </div>
+                <div class="input-box gender-options">Gender: 
+                Male  <label>
+     <input type="radio" id="male" name="gender" value="Male" onclick="genderValidate()" >
+    </label>
+    Female <label>
+      <input type="radio" id="female" name="gender" value="Female" onclick="genderValidate()"> 
+    </label>
+    Other<label>
+     <input type="radio" id="other" name="gender" value="Other" onclick="genderValidate()"> 
+    </label>
+</div>
+       
+                  <div>
+                    <input type="submit" name="submit" class="submit" value="Register Now" onclick="registration()"/>
+                </div>
+
+                <div class="login-link">
+                    <p>Already have an Account? <a href="Login.php" id="a">Login</a></p>
+                </div>
+                <div class="login-link">
+                    <p></p>
+                </div>
+
+            </div>
+        
+        </fieldset>
+    
+    
+    
+    </form>
+    <script src="../Assets/registration.js"></script>  
 </body>
 </html>

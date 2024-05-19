@@ -13,51 +13,46 @@ $schedule=getAllSchedule();
 <html>
     <head>
         <title>Profile</title>
+        <link rel="stylesheet" href="../Assets/Admin.css"/>
     </head>
-<body>
-<table border="1" cellspacing="0" width="750">
+<body id="b8">
+        <fieldset id="b9">
+<img src="../Assets/logo.png" id="logo-image">
+    <h3 id="b1"><u>Click & Stay</u></h3>
+    
+    <h4 id="b10">Find your next stay</h4>
+    <a id="b11" href="AddCalender.php">Add</a>
+    <a id="b4" href="AdminHome.php">home</a>
+      
+</fieldset>
 
-        <tr>
-            <td colspan=2><table><tr><td width="334">Click & Stay</td><td align=right>  Logged in as Admin
-</td></tr></table></td>
-        </tr>
-
-        <tr  style="height:200;">
-            <td align="Left" style="width:200">
-        <b>Account</b><hr>
- 
-                    <span align="left">
-                        <ul>
-                            <li><a href="AdminHome.php">Home</a></li>
-                            <li><a href="CalenderAdmin.php">View Schedule</a></li>
-                            <li><a href="AddCalender.php">Add Schedule</a></li>
-                            <li><a href="UpdateCalender.php">Update Schedule</a></li>
-                            <li><a href="DeleteCalender.php">Delete Schedule</a></li>
-                        </ul>
-</span>
      
-                </td><td align=top width="400"><span align=top>
-                    <fieldset width="200">
-                        <legend>Guest</legend>
-                        <table border=1; cellspacing='0'>
-                            <tr>
+<div id="a20">
+                    
+                        <table border=1  cellspacing=0 align="center" class="c4">
+                            <tr class="c3">
                            
                 <td>ID</td>
                 <td>DATE</td>
                 <td>SCHEDULE</td>
                 <td>TIME</td>
                 <td>DEPARTMENT</td>
+                <td>Action</td>
+                <td>Action</td>
             </tr><?php for($i=0; $i<count($schedule); $i++){?>
+               
                             <tr>
                             <td> <?php echo $schedule[$i]['sid']; ?></td>  
                             <td> <?php echo $schedule[$i]['dd']; ?>/<?php echo $schedule[$i]['mm']; ?>/<?php echo $schedule[$i]['yyyy']; ?></td>  
                             <td> <?php echo $schedule[$i]['schedule']; ?></td>  
                             <td> <?php echo $schedule[$i]['hh']; ?>:<?php echo $schedule[$i]['min']; ?><?php echo $schedule[$i]['meridiun']; ?></td>  
                             <td> <?php echo $schedule[$i]['department']; ?></td>  
+                            <td><b> <a href="updateCalView.php?sid=<?=$schedule[$i]['sid']?>"> Edit </a></b> </td>
+             <td><b> <a  href="deleteCalView.php?sid=<?=$schedule[$i]['sid']?>">Delete </a> </b></td>
                         </tr>
                         <?php } ?>
         </table>
-                        
+           
                
 </body>
 </html>

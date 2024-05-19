@@ -12,6 +12,7 @@ $name=nul();
 <html>
     <head>
         <title>Update</title>
+        <link rel="stylesheet" href="AdminStyle.css"/>
     </head>
 <body>
 <table border="1" cellspacing="0" width="750">

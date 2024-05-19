@@ -1,6 +1,5 @@
 <?php 
     require_once('db.php');
-
     function login($username, $password){
         $con = dbConnection();
         $sql = "select * from guest where username='{$username}' and password='{$password}'";

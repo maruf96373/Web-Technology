@@ -13,18 +13,19 @@ $name=getAllGuest();
 <html>
     <head>
         <title>Profile</title>
+        <link rel="stylesheet" href="AdminStyle.css"/>
     </head>
-<body>
-<table border="1" cellspacing="0" width="750">
+<body class="b1">
+<table border="1" cellspacing="0" width="750" id="b2">
 
         <tr>
             <td colspan=2><table><tr><td width="334">Click & Stay</td><td align=right>  Logged in as Admin
 </td></tr></table></td>
         </tr>
 
-        <tr  style="height:200;">
+        <tr  style="height:200;" id="b5">
             <td align="Left" style="width:200">
-        <b>Account</b><hr>
+        <b>Dashboard</b><hr>
  
                     <span align="left">
                         <ul>

@@ -10,41 +10,34 @@ $schedule=scdl($sid);
 <html>
     <head>
         <title>Update View</title>
+        <link rel="stylesheet" href="../Assets/Admin.css"/>
     </head>
-<body>
-<table border="1" cellspacing="0" width="750">
-
-        <tr>
-            <td colspan=2><table><tr><td width="334">Click & Stay</td><td align=right>  Logged in as Admin
-</td></tr></table></td>
-        </tr>
-
-        <tr  style="height:200;">
-            <td align="Left" style="width:200">
-        <b>Account</b><hr>
- 
-                    <span align="left">
-                        <ul>
-                            <li><a href="AdminHome.php">Home</a></li>
-                            <li><a href="UpdateCalender.php">Update Calender</a></li>
-                        </ul>
-</span>
-     
-                </td><td align=top width="400"><span align=top>
+<body id="b8">
+ <fieldset id="b9">
+    <img src="../Assets/logo.png" id="logo-image">
+    
+    <h3 id="b1"><u>Click & Stay</u></h3>
+    
+    <h4 id="b10">Find your next stay</h4>
+    <a id="b11" href="CalenderAdmin.php">back</a>
+    
+      
+</fieldset>
+                <p></p>
                 <form method="post" action="../Controller/UpdateCalCheck.php" enctype="">
-                    <fieldset width="200">
-                        <legend>Update Schedule</legend>
-                        <table>
+                 
+                      
+                        <table class="c1" align="center">
                         <?php for($i=0; $i<count($schedule); $i++){?>
                             <tr>
-                            <td>Schedule Id</td> <td>:<input type="number" name="sid" value="<?php echo $schedule[$i]['sid']; ?>"></td>
+                            <td>Schedule Id</td> <td>:<input type="number" id="sid" name="sid" value="<?php echo $schedule[$i]['sid']; ?>" onkeyup="IdCheck()"></td>
                             </tr>
                             <tr>
                             <td>Schedule Date</td> <td>
                   <div style="padding: 4px;">
-                    <input type="text" size="2px" name="dd" value="<?php echo $schedule[$i]['dd']; ?>"><b> /</b>
-                    <input type="text" size="2px" name="mm" value="<?php echo $schedule[$i]['mm']; ?>"><b> /</b>
-                    <input type="text" size="2px" name="yyyy" value="<?php echo $schedule[$i]['yyyy']; ?>">
+                    <input type="text" size="2px" id="dd" name="dd" value="<?php echo $schedule[$i]['dd']; ?>" onkeyup="dob()"><b> /</b>
+                    <input type="text" size="2px" id="mm" name="mm" value="<?php echo $schedule[$i]['mm']; ?>" onkeyup="dob()"><b> /</b>
+                    <input type="text" size="2px" id="yyyy" name="yyyy" value="<?php echo $schedule[$i]['yyyy']; ?>" onkeyup="dob()">
                     <i>(dd/mm/yyyy)</i>
                   </div>
                 </td>
@@ -56,9 +49,9 @@ $schedule=scdl($sid);
     <td>Schedule Time</td> 
     <td>
         <div style="padding: 4px;">
-            <input type="text" size="2px" name="hh" value="<?php echo $schedule[$i]['hh']; ?>"><b> :</b>
-            <input type="text" size="2px" name="min" value="<?php echo $schedule[$i]['min']; ?>">
-            <select name="meridiun">
+            <input type="text" size="2px" id="hh" name="hh" value="<?php echo $schedule[$i]['hh']; ?>" onkeyup="checkTime()"><b> :</b>
+            <input type="text" size="2px" id="min" name="min" value="<?php echo $schedule[$i]['min']; ?>"onkeyup="checkTime()">
+            <select name="meridiun" id="meridiun" onkeyup="checkTime()">
     <option value="AM" <?php if ($schedule[$i]['meridiun'] == 'AM') echo 'selected'; ?>>AM</option>
     <option value="PM" <?php if ($schedule[$i]['meridiun'] == 'PM') echo 'selected'; ?>>PM</option>
 </select>
@@ -68,17 +61,18 @@ $schedule=scdl($sid);
 </tr>
 
   <tr>
-                <td>Department</td> <td>:<input type="text" name="department" value="<?php echo $schedule[$i]['department']; ?>"></td>
+                <td>Department</td> <td>:<input type="text" id="dept" name="department" value="<?php echo $schedule[$i]['department']; ?>" onkeyup="depCheck()"></td>
                 </tr>
                 <tr>
                     <td>
-                    <input type="submit" name="Submit" value="Update"/>
+                    <td colspan="2" style="text-align: center;">
+                    <input type="submit" name="Submit" id="b7" value="Update"/>
 </td>
 </tr>
                 <?php } ?>
                         </table>
-                            </fieldset>
+                           
                </form>
-               
+               <script src="../Assets/calender.js"></script>  
 </body>
 </html>

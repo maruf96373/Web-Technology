@@ -52,9 +52,9 @@
     function createCal($Cal){
       $con = dbConnection();
       $sid = mysqli_real_escape_string($con, $Cal['sid']);
-      $hh = mysqli_real_escape_string($con,$Cal['hh']);
-      $min = mysqli_real_escape_string($con,$Cal['min']);
-      $meridiun = mysqli_real_escape_string($con,$Cal['meridiun']);
+      $dd = mysqli_real_escape_string($con,$Cal['dd']);
+      $mm = mysqli_real_escape_string($con,$Cal['mm']);
+      $yyyy = mysqli_real_escape_string($con,$Cal['yyyy']);
       $schedule = mysqli_real_escape_string($con,$Cal['schedule']);
       $hh = mysqli_real_escape_string($con,$Cal['hh']);
       $min = mysqli_real_escape_string($con,$Cal['min']);
@@ -62,8 +62,8 @@
       $department = mysqli_real_escape_string($con,$Cal['department']);
      
      
-      $sql = "INSERT INTO calender (sid,hh, min, meridiun, schedule, hh,min,meridiun, department ) 
-              VALUES ('$sid','$hh', '$min', '$meridiun', '$schedule', '$hh','$min','$meridiun', '$department')";       
+      $sql = "INSERT INTO calender (sid,dd, mm, yyyy, schedule, hh,min,meridiun, department ) 
+              VALUES ('$sid','$dd', '$mm', '$yyyy', '$schedule', '$hh','$min','$meridiun', '$department')";       
   
       if(mysqli_query($con, $sql)){
           return true;

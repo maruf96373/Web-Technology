@@ -9,6 +9,7 @@ $name=$_REQUEST['username'];
 <html>
     <head>
         <title>Update View</title>
+        <link rel="stylesheet" href="AdminStyle.css"/>
     </head>
 <body>
 <table border="1" cellspacing="0" width="750">
@@ -30,6 +31,7 @@ $name=$_REQUEST['username'];
 </span>
      
                 </td><td align=top width="400"><span align=top>
+                <p></p>
                 <form method="post" action="../Controller/updateCheck.php" enctype="">
                     <fieldset width="200">
                         <legend>Guest</legend>
@@ -40,13 +42,14 @@ $name=$_REQUEST['username'];
                 <tr>
                 <td>Username </td>    <td> :<input type="text" name="username" value="<?php echo $name ?>"></td>  
 </tr>
-<tr><td>ID</td>     <td>:<input type="text" name="gid" value=""></td>
+<tr><td>ID</td>     <td>:<input type="text" id="gid" name="gid" value="" onkeyup="IdCheck()"></td>
 </tr>
                <tr><td> <input type="submit" name="Submit" value="Update"/></td></tr>
 
 
 </table>
             </form>
-               
+            <script src="../Assets/updateID.js"></script>  
+            
 </body>
 </html>

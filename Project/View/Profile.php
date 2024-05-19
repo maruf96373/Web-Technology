@@ -17,33 +17,39 @@ $name=name($user);
 <html>
     <head>
         <title>Profile</title>
+        <link rel="stylesheet" href="../Assets/customerStyle.css"/>
     </head>
-<body>
-<table border="1" cellspacing="0" width="750">
-<?php for($i=0; $i<count($name); $i++){?>
-        <tr>
-            <td colspan=2><table><tr><td align=left> Guest ID: <?php echo $name[$i]['gid']; ?></td><td width="334" align=center>Click & Stay</td><td align=right>  Logged in as <a style="color:rgb(0, 102, 255); " href="<?php echo $name[$i]['name']; ?>"><?php echo $name[$i]['name']; ?></a>
-</td></tr></table></td>
-        </tr>
+<body class="b1">
+<fieldset id="b9">
+    <img src="../Assets/logo.png" id="logo-image">
+        <h3 id="b1"><u>Click & Stay</u></h3>
+        
+        <h4 id="b10">Find your next stay</h4>
+        <?php for($i=0; $i<count($name); $i++){?>
 
-        <tr  style="height:200;">
-            <td align="Left" style="width:200">
-        <b>Account</b><hr>
+<a id="b4" href="<?php echo $name[$i]['name']; ?>"><?php echo $name[$i]['name']; ?></a>
+<?php } ?>
+        
+    </fieldset>
+<table border="1" cellspacing="0" width="750" id="b2">
+<?php for($i=0; $i<count($name); $i++){?>
+       
+        <b>Sidebar</b><hr>
  
                     <span align="left">
                         <ul>
-                            <li><a href="home.php">Home</a></li>
-                            <li><a href="Profile.php">View Profile</a></li>
-                            <li><a href="EditProfile.php">Edit Profile</a></li>
-                            <li><a href="profilePicture.php">Change Profile Picture</a></li>
-                            <li><a href="ChangePassword.php">Change Password</a></li>
+                            <li><a  class="c1" href="home.php">Home</a></li>
+                            <li><a  class="c1" href="Profile.php">View Profile</a></li>
+                            <li><a  class="c1" href="EditProfile.php">Edit Profile</a></li>
+                            <li><a  class="c1" href="profilePicture.php">Change Profile Picture</a></li>
+                            <li><a  class="c1" href="ChangePassword.php">Change Password</a></li>
                         </ul>
 </span>
      
                 </td><td align=top width="400"><span align=top>
-                    <fieldset width="200">
+                    <fieldset width="200" align="center">
                         <legend> Profile</legend>
-                        <table>
+                        <table align="center">
                             <tr>
                                 <td>
                         <table>

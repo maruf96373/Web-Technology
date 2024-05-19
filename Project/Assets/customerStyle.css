@@ -1,0 +1,333 @@
+#b1 {
+    position: absolute; 
+    
+    top: 150px; 
+    left: 55px; 
+
+font-style: italic;
+font-size: 25px; 
+color: white; 
+}
+#logo-image {
+    position: absolute;
+    top: 25px; 
+    left: 25px; 
+    max-width: 200px; 
+    max-height: 200px;
+    font-size: large; 
+  }
+  #bikash-image {
+    
+   
+   
+    width:70px; 
+            height: auto;
+           
+  }
+  #nogod-image {
+    
+   
+    
+    width: 70px;
+    height: auto;
+   
+  }
+  #cash-image {
+    
+   
+   
+    width:50px; 
+            height: auto;
+           
+  }
+  .payment-option {
+    
+    color:black;
+   
+    font-size: 20px;
+    
+   
+}
+
+
+#b2{
+    font-style: italic ;
+    font-size:  40;
+   color: rgba(0,0,0);
+    
+ }
+ #b5{
+    font-style: italic ;
+    font-size:  25;
+   color: rgba(0,0,0);
+    
+ }
+#b3{
+    font-style: normal ;
+    font-size: 15;
+    color:rgb(255,255,255);margin-top: 10px; padding:10px;
+    background-color:darkslateblue; 
+    
+ }
+ #b4{
+   
+            color:white;
+            font-style: italic ;
+            font-size: 20px;
+            position: absolute; 
+            top: 25px; 
+            right: 25px; 
+    
+   
+    
+ }
+ #b12{
+   
+    color:black;
+   
+    font-size: 20px;
+    
+    
+
+
+
+}
+ #b11{
+   
+    color:white;
+    font-style: italic ;
+    font-size: 20px;
+    position: absolute; 
+    top: 55px; 
+    right: 25px; 
+
+
+
+}
+ #b8{
+   
+   text-align: center; 
+    
+    background-color:white;
+   
+}
+#b9{
+
+    width: 1000x; 
+            height:250px; 
+            background-color:darkslateblue; 
+          
+          
+} 
+#b13{
+
+    width:100px; 
+            height:60px; 
+    
+          
+} 
+#b14{
+
+    position: absolute;
+    top: 450px ;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 500px; 
+    height: 200px;
+          
+    
+          
+} 
+#b17{
+
+  position: absolute;
+  top: 450px ;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 500px; 
+  height: 200px;  
+  
+        
+} 
+
+
+.c7{
+  
+   
+    font-style: oblique;
+    color: white;
+    background-color:darkslateblue;  
+    
+ }
+ .c8{
+  
+    
+    font-style: normal;
+    color:black ;
+   
+   
+    
+ }
+ 
+.c1{
+   
+    
+    font-style: oblique;
+     color:black ;
+   
+    
+ }
+ .c2{
+   
+    font-size: large;
+    font-style: normal ;
+    color:white;
+   
+}
+
+.c3{
+   
+    
+    font-style:oblique;
+        font-size: large;
+    
+        background-color:darkslateblue; 
+    color:white;
+   
+}
+.c4 {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: normal;
+    font-size: large;
+    color: black;
+    border-collapse: collapse; 
+    width: 80%; 
+}
+.c4 th, .c4 td {
+    border: 1px solid white; 
+    padding: 8px;
+    text-align: center; 
+}
+
+.c4 tr:nth-child(even) {
+    background-color: white; 
+}
+
+.c4 th {
+   
+    color: white; 
+}
+
+
+#b7{
+    font-style: italic ;
+    font-size:  15;
+    color:rgb(0, 0, 0);margin-top: 10px; padding:10px;
+    background-color: rgba(255,255,255);
+    
+    
+ }
+ 
+ 
+ #b10 {
+    position: absolute; 
+    top: 180px; 
+    left:40px; 
+
+font-style: oblique;
+font-size: 20px; 
+color: white;
+  }
+  .room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+  }
+  
+  
+  .room-item {
+    margin: 10px;
+    width: calc(15% - 20px); 
+    text-decoration:solid;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  #room-picture {
+    width: 200px;
+    height: 200px;
+   
+    object-fit: cover;
+}
+.facility-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+  }
+  .facility-item {
+    margin: 15px;
+    width: calc(15% - 20px); /* Adjust as needed */
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #facility-picture {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+  }
+  .package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+  }
+  .package-item {
+    margin: 15px;
+    width: calc(15% - 20px); /* Adjust as needed */
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #package-picture {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+  }
+  .notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.notification.show {
+    display: block;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Your additional CSS styles go here */

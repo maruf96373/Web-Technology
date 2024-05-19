@@ -10,10 +10,6 @@ function username($username) {
     if ($username == "") {
         echo "Username cannot be empty";
     } else {
-        $verify = uniuser($username);
-        if ($verify) {
-            echo "This username is already taken. Please choose a different username";
-        }
   
         if (strlen($username) <5) {
             echo "Username must be at least 5 characters long";

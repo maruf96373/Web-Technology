@@ -1,7 +1,18 @@
 <?php
 require_once('../Model/guestdb.php');
-$username=$_REQUEST['username'];
-$gid=$_REQUEST['gid'];
+if (isset($_POST['gid'])) {
+    $gid = $_POST['gid']; 
+    $taken = uniId($gid);
+  if ($taken) {
+      echo "This ID is already taken. Please choose a different ID";
+      return false;
+  }
+}else {
+  echo "Invalid request";
+  exit;
+}
+$gid=isset($_REQUEST['gid']) ? $_REQUEST['gid'] : '';
+$username=isset($_REQUEST['username']) ? $_REQUEST['username'] : '';
 function username($username) {
     if ($username == "") {
         echo "Username cannot be empty";
@@ -51,13 +62,6 @@ function username($username) {
         echo "Invalid Guest ID format. After the 'G' prefix, it must contain only digits";
         return false;
     }
-
-    $verify = uniId($gid);
-    if ($verify) {
-        echo "This ID is already taken. Please choose a different ID";
-        return false;
-    }
-
     return true;
 }
 if(username($username)&&IdCheck($gid)){

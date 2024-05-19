@@ -1,15 +1,25 @@
 <?php
 require_once('../Model/Schedledb.php');
-$sid=$_REQUEST['sid'];
-$dd = $_REQUEST['dd'];
-$mm = $_REQUEST['mm'];
-$yyyy = $_REQUEST['yyyy'];
-$schedule = $_REQUEST['schedule'];
-$hh = $_REQUEST['hh'];
-$min = $_REQUEST['min'];
-$meridiun = $_REQUEST['meridiun'];
-$department = $_REQUEST['department'];
-
+if (isset($_POST['sid'])) {
+    $sid = $_POST['sid']; 
+    $taken = uniId($sid);
+  if ($taken) {
+      echo "This ID is already taken. Please choose a different ID";
+      return false;
+  }
+}else {
+  echo "Invalid request";
+  exit;
+}
+$sid=isset($_REQUEST['sid']) ? $_REQUEST['sid'] : '';
+$dd = isset($_REQUEST['dd']) ? $_REQUEST['dd'] : '';
+$mm = isset($_REQUEST['mm']) ? $_REQUEST['mm'] : '';
+$yyyy = isset($_REQUEST['yyyy']) ? $_REQUEST['yyyy'] : '';
+$schedule = isset($_REQUEST['schedule']) ? $_REQUEST['schedule'] : '';
+$hh = isset($_REQUEST['hh']) ? $_REQUEST['hh'] : '';
+$min = isset($_REQUEST['min']) ? $_REQUEST['min'] : '';
+$meridiun = isset($_REQUEST['meridiun']) ? $_REQUEST['meridiun'] : '';
+$department = isset($_REQUEST['department']) ? $_REQUEST['department'] : '';
 function IdCheck($sid) {
     if (empty($sid)) {
         return "Guest ID cannot be empty";
@@ -25,13 +35,6 @@ function IdCheck($sid) {
         echo "Invalid Guest ID format. it must contain only digits";
         return false;
     }
-
-    $verify = uniId($sid);
-    if ($verify) {
-        echo "This ID is already taken. Please choose a different ID";
-        return false;
-    }
-
     return true;
 }
 function DateCheck($dd,$mm,$yyyy){
